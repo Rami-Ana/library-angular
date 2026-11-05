@@ -1,0 +1,8 @@
+ul{
+    list-style-type: none;
+}
+.card{
+    cursor: pointer;
+    text-decoration-line: underline;
+    color: blue;
+}

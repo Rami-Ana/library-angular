@@ -1,9 +1,8 @@
 <section>
     @for (actualBook of books(); track actualBook.id) {
     <app-book-card
-    [book]= 'actualBook'
-    (bookClick) = 'bookCardClick($event)'>
-        
+        [book]= 'actualBook'
+        (bookClick) = 'goToDetail($event)'>
     </app-book-card>
     }
 </section>

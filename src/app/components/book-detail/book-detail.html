@@ -1,1 +1,20 @@
-<p>book-detail works!</p>
+<article>
+    @if(book){
+    <ul>
+        <img src="{{book.coverImage}}" alt="image test">
+        <h1>{{book.title}}</h1>
+        <h3>By: {{book.author}}</h3>
+
+        <hr>
+        <q>{{book.description}}</q><br>
+        <p><label class="bold-text">Genre: </label>{{book.genre}}</p>
+        <p><label class="bold-text">Year: </label>{{book.publishedYear}}</p>
+        <p><label class="bold-text">ISBN: </label>{{book.isbn}}</p>
+        <p><label class="bold-text">Id: </label>{{book.id}}</p>
+        <hr>
+    </ul>
+    }
+    @else {<p>Libro no encontrado</p>}
+
+    <a href="/">← Volver a la galeria</a>
+</article>

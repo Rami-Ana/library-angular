@@ -1,15 +1,14 @@
-<article (click)="onClickBook()">
+<article>
 
     <ul>
-        <img src="{{book().coverImage}}" alt="">
+        <img src='{{book().coverImage}}' alt='image test'>
 
-        <li><label>Id: </label>{{book().id}}</li>
-        <li><label>Title: </label>{{book().title}}</li>
-        <li><label>Author: </label>{{book().author}}</li>
-        <li><label>Description: </label>{{book().description}}</li>
-        <li><label>Genre: </label>{{book().genre}}</li>
-        <li><label>Published Year: </label>{{book().publishedYear}}</li>
-        <li><label>ISBN: </label>{{book().isbn}}</li>
+        <br>
+        <li><label class="bold-text">Title: </label>{{book().title}}</li>
+        <li><label class="bold-text">Author: </label>{{book().author}}</li>
+        <li><label class="bold-text">Genre: </label>{{book().genre}}</li>
+        <br>
+        <li (click)='onClickBook()' class='card'>Detail book nº {{book().id}} →</li>
     </ul>
     <hr>
     <br>

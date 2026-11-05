@@ -1,1 +1,8 @@
-/* You can add global styles to this file, and also import other style files */
+img{
+    max-width: 100px;
+    height: 100px;
+}
+.bold-text{
+     color: rgb(161, 82, 49);
+    font-weight: bold;
+}

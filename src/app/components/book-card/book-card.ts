@@ -9,9 +9,9 @@ import { BookModel } from '../../interfaces/book-model';
 })
 export class BookCard {
   readonly book = input.required <BookModel>();
-  readonly bookClick = output <BookModel>();
+  readonly bookClick = output <number>();
 
   onClickBook():void {
-    this.bookClick.emit(this.book());
+    this.bookClick.emit(this.book().id);
   }
 }
