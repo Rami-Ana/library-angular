@@ -1,4 +1,4 @@
-import { Component, inject, signal } from '@angular/core';
+import { ChangeDetectionStrategy, Component, inject, signal } from '@angular/core';
 import { BookModel } from '../../interfaces/book-model';
 import { BookCard } from '../book-card/book-card';
 import { BookService } from '../../core/services/book-service';
@@ -9,6 +9,7 @@ import { Router } from '@angular/router';
   selector: 'app-book-list',
   styleUrl: './book-list.css',
   templateUrl: './book-list.html',
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 
 export class BookList {
@@ -17,12 +18,7 @@ export class BookList {
 
   readonly books = signal<BookModel[]>(this.bookData.getAll())
 
-  goToDetail(id:number){
+  goToDetail(id: number) {
     this.router.navigateByUrl(`book/${id}`);
   }
-
-
-  // bookCardClick(bookObject: BookModel): void {
-  //   console.log(bookObject);
-  // }
 }

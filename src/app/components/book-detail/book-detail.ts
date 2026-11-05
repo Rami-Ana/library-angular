@@ -1,4 +1,4 @@
-import { Component, inject } from '@angular/core';
+import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { BookService } from '../../core/services/book-service';
 
@@ -7,6 +7,7 @@ import { BookService } from '../../core/services/book-service';
   selector: 'app-book-detail',
   styleUrl: './book-detail.css',
   templateUrl: './book-detail.html',
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class BookDetail {
   readonly route = inject(ActivatedRoute);

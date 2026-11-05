@@ -1,5 +1,6 @@
 import { TestBed } from '@angular/core/testing';
 import { BookService } from './book-service';
+import { BookModel } from '../../interfaces/book-model';
 
 describe('BookService', () => {
   let service: BookService;
@@ -12,4 +13,5 @@ describe('BookService', () => {
   it('should be created', () => {
     expect(service).toBeTruthy();
   });
+
 });
