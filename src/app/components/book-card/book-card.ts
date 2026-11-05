@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, input, output } from '@angular/core';
+import { BookModel } from '../../interfaces/book-model';
 
 @Component({
   imports: [],
@@ -6,4 +7,11 @@ import { Component } from '@angular/core';
   styleUrl: './book-card.css',
   templateUrl: './book-card.html',
 })
-export class BookCard {}
+export class BookCard {
+  readonly book = input.required <BookModel>();
+  readonly bookClick = output <BookModel>();
+
+  onClickBook():void {
+    this.bookClick.emit(this.book());
+  }
+}

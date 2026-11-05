@@ -1,1 +1,16 @@
-<p>book-card works!</p>
+<article (click)="onClickBook()">
+
+    <ul>
+        <img src="{{book().coverImage}}" alt="">
+
+        <li><label>Id: </label>{{book().id}}</li>
+        <li><label>Title: </label>{{book().title}}</li>
+        <li><label>Author: </label>{{book().author}}</li>
+        <li><label>Description: </label>{{book().description}}</li>
+        <li><label>Genre: </label>{{book().genre}}</li>
+        <li><label>Published Year: </label>{{book().publishedYear}}</li>
+        <li><label>ISBN: </label>{{book().isbn}}</li>
+    </ul>
+    <hr>
+    <br>
+</article>

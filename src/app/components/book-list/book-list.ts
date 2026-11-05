@@ -1,14 +1,15 @@
 import { Component, signal } from '@angular/core';
 import { BookModel } from '../../interfaces/book-model';
+import { BookCard } from '../book-card/book-card';
 
 @Component({
-  imports: [BookList],
+  imports: [BookCard],
   selector: 'app-book-list',
   styleUrl: './book-list.css',
   templateUrl: './book-list.html',
 })
 export class BookList {
-  books = signal<BookModel[]>([
+  readonly books = signal<BookModel[]>([
     {
     id: 1,
     title: 'The Lost Kingdom',
@@ -110,4 +111,8 @@ export class BookList {
     isbn: '9781234567010',
   },
   ])
+
+  bookCardClick(bookObject: BookModel): void {
+    console.log(bookObject);
+  }
 }
